@@ -1,0 +1,18 @@
+{% extends "master.html" %}
+
+{% block title %}
+login page
+{%endblock %}
+
+{%block content %}
+
+<div class="container">
+<form action="{% url 'login' %}" method="post">
+    {% csrf_token %}
+    Email:<input type="email" name="email" placeholder="Enter email.."><br><br>
+    Password:<input type="password" name="password" placeholder="Enter Password.."><br><br>
+    <button type="submit">Log in</button>
+</form>
+</div>
+<h1>{{msg}}</h1>
+{%endblock%}

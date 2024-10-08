@@ -1,0 +1,20 @@
+{% extends "master.html"%}
+
+{% block title %}
+registration page
+{%endblock%}
+
+{%block content %}
+
+<div class="container">
+<form action="" method="post">
+    {%csrf_token%}
+    <b>First Name:</b><input type="text" name="fname" placeholder="Enter First Name"><br><br>
+    <b>Last Name:</b><input type="text" name="lname" placeholder="Enter Last Name"><br><br>
+    <b>Email Address:</b><input type="email" name="email" placeholder="Enter Email"><br><br>
+    <b>Password:</b><input type="password" name="password" placeholder="Enter Password"><br><br>
+    <button type="submit">Register</button>
+</form>
+</div>
+<h1>{{msg}}</h1>
+{%endblock%}
